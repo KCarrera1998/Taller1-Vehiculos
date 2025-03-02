@@ -159,7 +159,7 @@
             // 
             // btn_VehiculosCrear
             // 
-            btn_VehiculosCrear.Location = new Point(901, 57);
+            btn_VehiculosCrear.Location = new Point(901, 47);
             btn_VehiculosCrear.Name = "btn_VehiculosCrear";
             btn_VehiculosCrear.Size = new Size(128, 54);
             btn_VehiculosCrear.TabIndex = 13;
