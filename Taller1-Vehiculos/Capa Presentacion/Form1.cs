@@ -96,6 +96,10 @@ namespace Taller1_Vehiculos
                 {
                     control.Text=string.Empty;
                 }
+                if(control is CheckBox )
+                {
+                    control.Text = string.Empty;
+                }
             }
         }
     }
