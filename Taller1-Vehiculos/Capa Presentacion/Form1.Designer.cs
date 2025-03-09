@@ -44,25 +44,28 @@
             btn_VehiculosCrear = new Button();
             btn_VehiculosActualizar = new Button();
             btn_VehiculosEliminar = new Button();
+            btn_Salir = new Button();
+            btn_Cancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvVehiculos).BeginInit();
             SuspendLayout();
             // 
             // dgvVehiculos
             // 
             dgvVehiculos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVehiculos.Location = new Point(12, 355);
+            dgvVehiculos.Location = new Point(12, 317);
             dgvVehiculos.Name = "dgvVehiculos";
             dgvVehiculos.ReadOnly = true;
             dgvVehiculos.RowHeadersWidth = 51;
             dgvVehiculos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvVehiculos.Size = new Size(1053, 351);
+            dgvVehiculos.Size = new Size(960, 351);
             dgvVehiculos.TabIndex = 0;
             dgvVehiculos.CellClick += dgvVehiculos_CellClick;
+            dgvVehiculos.CellContentClick += dgvVehiculos_CellContentClick;
             // 
             // lb_VehiculoID
             // 
             lb_VehiculoID.AutoSize = true;
-            lb_VehiculoID.Location = new Point(35, 31);
+            lb_VehiculoID.Location = new Point(39, 21);
             lb_VehiculoID.Name = "lb_VehiculoID";
             lb_VehiculoID.Size = new Size(87, 20);
             lb_VehiculoID.TabIndex = 1;
@@ -71,7 +74,7 @@
             // lb_VehiculoMarca
             // 
             lb_VehiculoMarca.AutoSize = true;
-            lb_VehiculoMarca.Location = new Point(35, 81);
+            lb_VehiculoMarca.Location = new Point(39, 71);
             lb_VehiculoMarca.Name = "lb_VehiculoMarca";
             lb_VehiculoMarca.Size = new Size(53, 20);
             lb_VehiculoMarca.TabIndex = 2;
@@ -80,7 +83,7 @@
             // lb_VehiculoModelo
             // 
             lb_VehiculoModelo.AutoSize = true;
-            lb_VehiculoModelo.Location = new Point(35, 130);
+            lb_VehiculoModelo.Location = new Point(39, 120);
             lb_VehiculoModelo.Name = "lb_VehiculoModelo";
             lb_VehiculoModelo.Size = new Size(64, 20);
             lb_VehiculoModelo.TabIndex = 3;
@@ -89,7 +92,7 @@
             // lb_VehiculoAño
             // 
             lb_VehiculoAño.AutoSize = true;
-            lb_VehiculoAño.Location = new Point(35, 181);
+            lb_VehiculoAño.Location = new Point(39, 171);
             lb_VehiculoAño.Name = "lb_VehiculoAño";
             lb_VehiculoAño.Size = new Size(39, 20);
             lb_VehiculoAño.TabIndex = 4;
@@ -98,7 +101,7 @@
             // lb_VehiculoPrecio
             // 
             lb_VehiculoPrecio.AutoSize = true;
-            lb_VehiculoPrecio.Location = new Point(35, 234);
+            lb_VehiculoPrecio.Location = new Point(39, 224);
             lb_VehiculoPrecio.Name = "lb_VehiculoPrecio";
             lb_VehiculoPrecio.Size = new Size(50, 20);
             lb_VehiculoPrecio.TabIndex = 5;
@@ -108,7 +111,7 @@
             // 
             cbx_VehiculoEstado.FormattingEnabled = true;
             cbx_VehiculoEstado.Items.AddRange(new object[] { "Disponible", "Vendido" });
-            cbx_VehiculoEstado.Location = new Point(163, 280);
+            cbx_VehiculoEstado.Location = new Point(167, 270);
             cbx_VehiculoEstado.Name = "cbx_VehiculoEstado";
             cbx_VehiculoEstado.Size = new Size(267, 28);
             cbx_VehiculoEstado.TabIndex = 6;
@@ -116,7 +119,7 @@
             // lb_VehiculoEstado
             // 
             lb_VehiculoEstado.AutoSize = true;
-            lb_VehiculoEstado.Location = new Point(35, 283);
+            lb_VehiculoEstado.Location = new Point(39, 273);
             lb_VehiculoEstado.Name = "lb_VehiculoEstado";
             lb_VehiculoEstado.Size = new Size(54, 20);
             lb_VehiculoEstado.TabIndex = 7;
@@ -124,42 +127,42 @@
             // 
             // txt_VehiculoID
             // 
-            txt_VehiculoID.Location = new Point(163, 28);
+            txt_VehiculoID.Location = new Point(167, 18);
             txt_VehiculoID.Name = "txt_VehiculoID";
             txt_VehiculoID.Size = new Size(267, 27);
             txt_VehiculoID.TabIndex = 8;
             // 
             // txt_VehiculoMarca
             // 
-            txt_VehiculoMarca.Location = new Point(163, 78);
+            txt_VehiculoMarca.Location = new Point(167, 68);
             txt_VehiculoMarca.Name = "txt_VehiculoMarca";
             txt_VehiculoMarca.Size = new Size(267, 27);
             txt_VehiculoMarca.TabIndex = 9;
             // 
             // txt_VehiculoModelo
             // 
-            txt_VehiculoModelo.Location = new Point(163, 127);
+            txt_VehiculoModelo.Location = new Point(167, 117);
             txt_VehiculoModelo.Name = "txt_VehiculoModelo";
             txt_VehiculoModelo.Size = new Size(267, 27);
             txt_VehiculoModelo.TabIndex = 10;
             // 
             // txt_VehiculoAño
             // 
-            txt_VehiculoAño.Location = new Point(163, 178);
+            txt_VehiculoAño.Location = new Point(167, 168);
             txt_VehiculoAño.Name = "txt_VehiculoAño";
             txt_VehiculoAño.Size = new Size(267, 27);
             txt_VehiculoAño.TabIndex = 11;
             // 
             // txt_VehiculoPrecio
             // 
-            txt_VehiculoPrecio.Location = new Point(163, 231);
+            txt_VehiculoPrecio.Location = new Point(167, 221);
             txt_VehiculoPrecio.Name = "txt_VehiculoPrecio";
             txt_VehiculoPrecio.Size = new Size(267, 27);
             txt_VehiculoPrecio.TabIndex = 12;
             // 
             // btn_VehiculosCrear
             // 
-            btn_VehiculosCrear.Location = new Point(901, 47);
+            btn_VehiculosCrear.Location = new Point(803, 45);
             btn_VehiculosCrear.Name = "btn_VehiculosCrear";
             btn_VehiculosCrear.Size = new Size(128, 54);
             btn_VehiculosCrear.TabIndex = 13;
@@ -169,27 +172,51 @@
             // 
             // btn_VehiculosActualizar
             // 
-            btn_VehiculosActualizar.Location = new Point(901, 147);
+            btn_VehiculosActualizar.Location = new Point(803, 131);
             btn_VehiculosActualizar.Name = "btn_VehiculosActualizar";
             btn_VehiculosActualizar.Size = new Size(128, 54);
             btn_VehiculosActualizar.TabIndex = 14;
             btn_VehiculosActualizar.Text = "Actualizar";
             btn_VehiculosActualizar.UseVisualStyleBackColor = true;
+            btn_VehiculosActualizar.Click += btn_VehiculosActualizar_Click;
             // 
             // btn_VehiculosEliminar
             // 
-            btn_VehiculosEliminar.Location = new Point(901, 234);
+            btn_VehiculosEliminar.Location = new Point(803, 221);
             btn_VehiculosEliminar.Name = "btn_VehiculosEliminar";
             btn_VehiculosEliminar.Size = new Size(128, 54);
             btn_VehiculosEliminar.TabIndex = 15;
             btn_VehiculosEliminar.Text = "Eliminar";
             btn_VehiculosEliminar.UseVisualStyleBackColor = true;
+            btn_VehiculosEliminar.Click += btn_VehiculosEliminar_Click;
+            // 
+            // btn_Salir
+            // 
+            btn_Salir.Location = new Point(530, 677);
+            btn_Salir.Name = "btn_Salir";
+            btn_Salir.Size = new Size(442, 29);
+            btn_Salir.TabIndex = 16;
+            btn_Salir.Text = "Salir";
+            btn_Salir.UseVisualStyleBackColor = true;
+            btn_Salir.Click += btn_Salir_Click;
+            // 
+            // btn_Cancelar
+            // 
+            btn_Cancelar.Location = new Point(12, 677);
+            btn_Cancelar.Name = "btn_Cancelar";
+            btn_Cancelar.Size = new Size(449, 29);
+            btn_Cancelar.TabIndex = 17;
+            btn_Cancelar.Text = "Cancelar";
+            btn_Cancelar.UseVisualStyleBackColor = true;
+            btn_Cancelar.Click += btn_Cancelar_Click;
             // 
             // frm_Vehiculos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1077, 718);
+            ClientSize = new Size(984, 718);
+            Controls.Add(btn_Cancelar);
+            Controls.Add(btn_Salir);
             Controls.Add(btn_VehiculosEliminar);
             Controls.Add(btn_VehiculosActualizar);
             Controls.Add(btn_VehiculosCrear);
@@ -232,5 +259,7 @@
         private Button btn_VehiculosCrear;
         private Button btn_VehiculosActualizar;
         private Button btn_VehiculosEliminar;
+        private Button btn_Salir;
+        private Button btn_Cancelar;
     }
 }

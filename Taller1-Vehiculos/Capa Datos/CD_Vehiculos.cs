@@ -37,5 +37,32 @@ namespace Taller1_Vehiculos.Capa_Datos
             db_conexion.MtdCerrarConexion();
         }
 
+        public void MtdActualizarVehiculos(int CodigoVehiculo, string Marca, string Modelo, int Año, decimal Precio, string Estado)
+        {
+            string usp_ActualizarVehiculos = "usp_VehiculosEditar";
+            SqlCommand cmd_UspActualizarVehiculos = new SqlCommand(usp_ActualizarVehiculos, db_conexion.MtdAbrirConexion());
+            cmd_UspActualizarVehiculos.CommandType = CommandType.StoredProcedure;
+            cmd_UspActualizarVehiculos.Parameters.AddWithValue("@VehiculoID", CodigoVehiculo);
+            cmd_UspActualizarVehiculos.Parameters.AddWithValue("@Marca", Marca);
+            cmd_UspActualizarVehiculos.Parameters.AddWithValue("@Modelo", Modelo);
+            cmd_UspActualizarVehiculos.Parameters.AddWithValue("@Año", Año);
+            cmd_UspActualizarVehiculos.Parameters.AddWithValue("@Precio", Precio);
+            cmd_UspActualizarVehiculos.Parameters.AddWithValue("@Estado", Estado);
+            cmd_UspActualizarVehiculos.ExecuteNonQuery();
+
+            db_conexion.MtdCerrarConexion();
+        }
+
+        public void MtdEliminarVehiculos(int CodigoVehiculo)
+        {
+            string usp_EliminarVehiculos = "usp_VehiculosEliminar";
+            SqlCommand cmd_UspEliminarVehiculos = new SqlCommand(usp_EliminarVehiculos, db_conexion.MtdAbrirConexion());
+            cmd_UspEliminarVehiculos.CommandType=CommandType.StoredProcedure;
+            cmd_UspEliminarVehiculos.Parameters.AddWithValue("@VehiculoID", CodigoVehiculo);
+            cmd_UspEliminarVehiculos.ExecuteNonQuery() ;
+
+            db_conexion.MtdCerrarConexion();
+        }
+
     }
 }
